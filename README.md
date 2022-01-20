@@ -12,7 +12,7 @@ Wemos D1 Mini was programmed using the Arduino IDE.
 
 * 5VDC Mechanical Relay SRD-05VDC-SL-C
 
-Connected to the 12V 2A router wall adapter. The relay has a a maximum contact capacity of 7A 28VDC [1].
+Connected to the 12V 2A router wall adapter. The relay has a a maximum contact capacity of 7A 28VDC, and already has a flyback diode [1].
 * 5VDC Wall adapter
 
 Micro USB to power the Wemos.

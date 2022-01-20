@@ -1,6 +1,6 @@
 #include <ESP8266WiFi.h>
 
-//wi-fi info
+//Wi-Fi info
 #define WIFI_SSID "WIFI_SSID_HERE"
 #define WIFI_PASS "WIFI_PASSWORD_HERE"
 
@@ -61,7 +61,6 @@ void setup() {
   Serial.println();
   Serial.print(WiFi.localIP());
 }
-
 
 void loop(){
   wifiChecker();
