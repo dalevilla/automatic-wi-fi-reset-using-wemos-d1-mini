@@ -8,6 +8,8 @@ Electrical connections can be seen in the code (pins used).
 
 The controls of the project. It is connected to the Wi-Fi, and upon disconnection, activates the normally closed relay to reset the router.
 
+Wemos D1 Mini can be programmed via the Arduino IDE.
+
 * 5VDC Mechanical Relay SRD-05VDC-SL-C
 
 Connected to the 12V 2A router wall adapter. The relay has a a maximum contact capacity of 7A 28VDC [1].
