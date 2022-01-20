@@ -13,7 +13,7 @@ The controls of the project. It is connected to the Wi-Fi, and upon disconnectio
 Connected to the 12V 2A router wall adapter. The relay has a a maximum contact capacity of 7A 28VDC [1].
 * 5VDC Wall adapter
 
-Micro-usb to power the Wemos.
+Micro USB to power the Wemos.
 
 # References
 [1] https://www.circuitbasics.com/wp-content/uploads/2015/11/SRD-05VDC-SL-C-Datasheet.pdf
