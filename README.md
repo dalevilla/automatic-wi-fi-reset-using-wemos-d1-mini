@@ -1,5 +1,5 @@
 # automatic-wi-fi-reset-using-wemos-d1-mini
-This device resets the Wi-Fi router when internet connection is lost. Intermittent connection means the internet often disconnects, requiring manual reset by unplugging and plugging the adapter or pressing the router's power button two times. This device basically automates the process of manual resetting whenever the internet connectivity is lost. 
+This device resets the Wi-Fi router when internet connection is lost. Intermittent connection means the internet often disconnects, requiring manual reset by unplugging and plugging the adapter or pressing the router's power button two times. This device basically automates the process of manual resetting whenever the internet connection is lost. 
 
 # Hardware
 
