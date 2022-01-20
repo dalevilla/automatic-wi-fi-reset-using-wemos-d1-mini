@@ -8,7 +8,7 @@ Electrical connections can be seen in the code (pins used).
 
 The controls of the project. It is connected to the Wi-Fi, and upon disconnection, activates the normally closed relay to reset the router.
 
-Wemos D1 Mini can be programmed via the Arduino IDE.
+Wemos D1 Mini was programmed using the Arduino IDE.
 
 * 5VDC Mechanical Relay SRD-05VDC-SL-C
 
