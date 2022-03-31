@@ -19,3 +19,6 @@ Micro USB to power the Wemos.
 
 # References
 [1] https://www.circuitbasics.com/wp-content/uploads/2015/11/SRD-05VDC-SL-C-Datasheet.pdf
+
+# License
+The hardware content of this project is licensed under The TAPR Open Hardware License, the source code hence the software is licensed under the MIT License.
