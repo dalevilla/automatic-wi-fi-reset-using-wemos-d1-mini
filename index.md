@@ -1,10 +1,20 @@
-## Welcome to GitHub Pages
+This device resets the Wi-Fi router when internet connection is lost. Due to frequent disconnection (usually 2 to 3 times a day), it causes frustration to the users because they have to manually reset the router everytime the connection is lost (connection does not return automatically). The manual reset is done by unplugging and plugging the adapter or pressing the router's power button two times. The user has no remote access for resetting the router since when the internet is lost, router log-ins does not work. This means that the user will have to walk to the router often, disrupting work flow. Even if the log-in method works, it is better to automate the process so the users does not have to reset it manually.
 
-You can use the [editor on GitHub](https://github.com/dalevilla/automatic-wi-fi-reset-using-wemos-d1-mini/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Basically, this device automates the process of manual resetting whenever the internet connection is lost.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Materials
 
-### Markdown
+-Wemos D1 Mini
+  The controls of the project. It is connected to the Wi-Fi, and upon disconnection, activates the normally closed relay to reset the router.
+  
+-5VDC Mechanical Relay
+  Any 5VDC relay can be used as long as its contact capacity is rated for the voltage and current of the Wi-Fi router. In this case, the rating for the router is 12V 2A, so the relay used is SRD-05VDC-SL-C, which can handle up to 7A 28VDC. Also, this relay already has a flyback diode. 
+  Note that 5VDC is highlighted since Wemos D1 Mini works on 5V logic, i.e., you’ll need to step-up or step-down the voltage output of Wemos if the relay works on higher or lower voltage level respectively. It is also important to use a DC relay because AC relays cannot handle long exposure to arcing. 
+
+-5VDC Wall Adapter
+  Micro USB to power the Wemos.
+  
+### Ma
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
