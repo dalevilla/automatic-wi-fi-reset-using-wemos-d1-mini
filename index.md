@@ -4,17 +4,31 @@ Basically, this device automates the process of manual resetting whenever the in
 
 # Materials
 
--Wemos D1 Mini
-  The controls of the project. It is connected to the Wi-Fi, and upon disconnection, activates the normally closed relay to reset the router.
+### Wemos D1 Mini
+ 
+ The controls of the project. It is connected to the Wi-Fi, and upon disconnection, activates the normally closed relay to reset the router.
   
--5VDC Mechanical Relay
-  Any 5VDC relay can be used as long as its contact capacity is rated for the voltage and current of the Wi-Fi router. In this case, the rating for the router is 12V 2A, so the relay used is SRD-05VDC-SL-C, which can handle up to 7A 28VDC. Also, this relay already has a flyback diode. 
-  Note that 5VDC is highlighted since Wemos D1 Mini works on 5V logic, i.e., you’ll need to step-up or step-down the voltage output of Wemos if the relay works on higher or lower voltage level respectively. It is also important to use a DC relay because AC relays cannot handle long exposure to arcing. 
+### 5VDC Mechanical Relay
+ 
+Any 5VDC relay can be used as long as its contact capacity is rated for the voltage and current of the Wi-Fi router. In this case, the rating for the router is 12V 2A, so the relay used is SRD-05VDC-SL-C, which can handle up to 7A 28VDC. Also, this relay already has a flyback diode. 
+ 
+Note that 5VDC is used since Wemos D1 Mini works on 5V logic, i.e., you’ll need to step-up or step-down the voltage output of Wemos if the relay works on higher or lower voltage level respectively. It is also important to use a DC relay because AC relays cannot handle long exposure to arcing. 
 
--5VDC Wall Adapter
-  Micro USB to power the Wemos.
+### 5VDC Wall Adapter
+
+Micro USB to power the Wemos.
   
-### Ma
+# Methods
+
+### Wiring
+First is the electrical connections of the Wemos and the relay, pin 12 is used, which is pin D6 in Wemos. This is connected to the signal pin of the relay. Then, the Vcc of the relay is connected to the 5V pin of the Wemos, and their GND pins should be connected. However, it is safer to isolate the control and the relay by providing a separate Vcc supply to the relay and connecting it to its JD-Vcc pin. 
+
+Shown below is a photo of a prototype, using LED for simplicity. Note that the Arduino UNO is only used to power the LED.
+
+
+
+
+### Code
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
