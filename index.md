@@ -3,7 +3,7 @@ This device resets the Wi-Fi router when internet connection is lost. Due to fre
 Basically, this device automates the process of manual resetting whenever the internet connection is lost.
 
 # Materials
-
+---
 ### Wemos D1 Mini
  
  The controls of the project. It is connected to the Wi-Fi, and upon disconnection, activates the normally closed relay to reset the router.
@@ -21,7 +21,7 @@ Micro USB to power the Wemos.
 
   
 # Methods
-
+---
 ### Wiring
 First is the electrical connections of the Wemos and the relay, pin 12 is used, which is pin D6 in Wemos. This is connected to the signal pin of the relay. Then, the Vcc of the relay is connected to the 5V pin of the Wemos, and their GND pins should be connected. However, it is safer to isolate the control and the relay by providing a separate Vcc supply to the relay and connecting it to its JD-Vcc pin. 
 
@@ -40,7 +40,7 @@ To connect the NC and C contacts of the relay to the router, the wires of the ad
 
 ![image](https://user-images.githubusercontent.com/94373003/178096373-f3fcafb6-d416-4fe8-94cc-0bfd0f5f2191.png)
 
-
+---
 
 ### Code
 
