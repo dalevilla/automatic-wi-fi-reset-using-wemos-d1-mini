@@ -17,6 +17,8 @@ Note that 5VDC is used since Wemos D1 Mini works on 5V logic, i.e., you’ll nee
 ### 5VDC Wall Adapter
 
 Micro USB to power the Wemos.
+
+
   
 # Methods
 
@@ -38,6 +40,8 @@ To connect the NC and C contacts of the relay to the router, the wires of the ad
 
 ![image](https://user-images.githubusercontent.com/94373003/178096373-f3fcafb6-d416-4fe8-94cc-0bfd0f5f2191.png)
 
+
+
 ### Code
 
 For the program, ESP8266WiFI library is included because Wemos uses ESP8266 Wi-Fi chip. Next is defining *WIFI_SSID* and *WIFI_PASS* which is the name and password of the Wi-FI respectively. Pin 12 is then assigned to relayPin for easy of programming.
@@ -50,9 +54,11 @@ For the program, ESP8266WiFI library is included because Wemos uses ESP8266 Wi-F
 		unsigned int relayPin = 12; //D6 on Wemos
 ```
 
+
 Next is the setup() part in Arduino. *Serial.begin()* is for starting the serial monitor for debugging. We start with the relayPin (pin 12, D6) as high for reasons stated in comments of the code. In summary, the logic is inverse thus a high pin means the LED indicator of the relay is off, thus NC contact is closed.
 
 Since the board will be connecting to a network and not as access point, the mode is set into station mode, by providing *WIFI_STA* as the argument to *WiFi.mode*. Then, disconnect any prior connections and begin connecting to the Wi-Fi, by providing *WIFI_SSID* and *WIFI_PASS*. Wemos then is delayed for 12 seconds so it can connect to the network. This value is obtained by trial and error during prototyping after performing multiple connection tests and recording the time it took to connect. This value could be lowered if the device you are using can connect faster.
+
 
 ```markdown
 void setup() {
@@ -111,7 +117,9 @@ void setup() {
   Serial.print(WiFi.localIP());
 }
 ```
+
 Once the board is connected, it proceeds to the main loop. This loop just uses function *wifiChecker()* which activates the relay (therefore resetting the router) and resets the board after five seconds if the Wi-Fi connection is lost. By resetting the board, the prior process in *setup()* repeats.
+
 
 ```markdown
 void wifiChecker(){
@@ -129,6 +137,7 @@ void wifiChecker(){
 
 Function *relayControl()* in *wifiChecker()* just sets *relayPin* to low to open the NC contacts.
 
+
 ```markdown
 void relayControl(){
   //LOW D6 pin to open circuit for 500ms, then close again
@@ -139,5 +148,5 @@ void relayControl(){
 }
 ```
 
-#References
+# References
 [1] https://www.circuitbasics.com/setting-up-a-5v-relay-on-the-arduino/
