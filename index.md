@@ -46,7 +46,7 @@ To connect the NC and C contacts of the relay to the router, the wires of the ad
 
 For the program, ESP8266WiFI library is included because Wemos uses ESP8266 Wi-Fi chip. Next is defining *WIFI_SSID* and *WIFI_PASS* which is the name and password of the Wi-FI respectively. Pin 12 is then assigned to relayPin for easy of programming.
 
-```markdown
+```c++
 #include <ESP8266WiFi.h>
 //wi-fi info
 #define WIFI_SSID "WIFI_SSID_HERE"
@@ -60,7 +60,7 @@ Next is the setup() part in Arduino. *Serial.begin()* is for starting the serial
 Since the board will be connecting to a network and not as access point, the mode is set into station mode, by providing *WIFI_STA* as the argument to *WiFi.mode*. Then, disconnect any prior connections and begin connecting to the Wi-Fi, by providing *WIFI_SSID* and *WIFI_PASS*. Wemos then is delayed for 12 seconds so it can connect to the network. This value is obtained by trial and error during prototyping after performing multiple connection tests and recording the time it took to connect. This value could be lowered if the device you are using can connect faster.
 
 
-```markdown
+```c++
 void setup() {
   Serial.begin(115200);
   Serial.println();
@@ -121,7 +121,7 @@ void setup() {
 Once the board is connected, it proceeds to the main loop. This loop just uses function *wifiChecker()* which activates the relay (therefore resetting the router) and resets the board after five seconds if the Wi-Fi connection is lost. By resetting the board, the prior process in *setup()* repeats.
 
 
-```markdown
+```c++
 void wifiChecker(){
   //Checks if wifi is still connected, if not, activate relay to reset wifi
   //wait 5s then reset to restart program
@@ -138,7 +138,7 @@ void wifiChecker(){
 Function *relayControl()* in *wifiChecker()* just sets *relayPin* to low to open the NC contacts.
 
 
-```markdown
+```c++
 void relayControl(){
   //LOW D6 pin to open circuit for 500ms, then close again
 
