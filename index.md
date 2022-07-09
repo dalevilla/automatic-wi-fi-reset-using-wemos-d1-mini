@@ -147,6 +147,6 @@ void relayControl(){
   digitalWrite(relayPin, HIGH); 
 }
 ```
-
+---
 # References
 [1] https://www.circuitbasics.com/setting-up-a-5v-relay-on-the-arduino/
